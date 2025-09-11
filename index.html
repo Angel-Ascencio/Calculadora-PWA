@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="manifest" href="./manifest.json" />
+
+</head>
+
+<script>
+    //Check that service workers are supported
+    if("serviceWorker" in navigator) {
+        //Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("./sw.js");
+        })
+    }
+</script>
+
+<body>
+    <div class="calculadora">
+        <div class="pantalla">
+            <span class="pantalla-texto" id="pantalla">0.0</span>
+            
+        </div>
+        
+        <div class="botones">
+            <button class="btn btn-ac" onclick="borrar()">AC</button>
+            <button class="btn btn-funcion" onclick="retroceso()">⌫</button>
+            <button class="btn btn-operador" onclick="operador('÷')">÷</button>
+            
+            <button class="btn btn-numero" onclick="numero('7')">7</button>
+            <button class="btn btn-numero" onclick="numero('8')">8</button>
+            <button class="btn btn-numero" onclick="numero('9')">9</button>
+            <button class="btn btn-operador" onclick="operador('×')">×</button>
+            
+            <button class="btn btn-numero" onclick="numero('4')">4</button>
+            <button class="btn btn-numero" onclick="numero('5')">5</button>
+            <button class="btn btn-numero" onclick="numero('6')">6</button>
+            <button class="btn btn-operador" onclick="operador('−')">−</button>
+            
+            <button class="btn btn-numero" onclick="numero('1')">1</button>
+            <button class="btn btn-numero" onclick="numero('2')">2</button>
+            <button class="btn btn-numero" onclick="numero('3')">3</button>
+            <button class="btn btn-operador" onclick="operador('+')">+</button>
+            
+            <button class="btn btn-numero btn-cero" onclick="numero('00')">00</button>
+            <button class="btn btn-numero" onclick="numero('0')">0</button>
+            <button class="btn btn-punto" onclick="punto()">.</button>
+            <button class="btn btn-igual" onclick="igual()">=</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
