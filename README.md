@@ -5,14 +5,14 @@ Calculadora PWA ligera y moderna con soporte para operaciones básicas, desplaza
 
 **Demo:** https://68e376ebc0086ae17cbca208--pwacalculadora.netlify.app/
 
-## 🛠️ Tecnologías
+## Tecnologías
 - JavaScript Vanilla
 - HTML5
 - CSS3
 - PWA
 - Workbox CLI
 
-## 📦 Características
+## Características
 - Operaciones matemáticas básicas
 - Diseño responsivo
 - Funcionamiento offline
